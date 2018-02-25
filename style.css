@@ -1,0 +1,261 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+/* Header Styles */
+
+header {
+    width: 25%;
+    height: 4rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    position: relative;
+    font-size: 1rem;
+    line-height: 0;
+    color: #fff;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+/* Aside Styles */
+
+aside {
+    width: 4rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.aside-content {
+    height: 50%;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    
+}
+
+.aside-category {
+    transform: rotate(-90deg);
+}
+.aside-seperator {
+    width: 1rem;
+    height: 2px;
+    background-color: #000;
+}
+
+.aside-year {
+    transform: rotate(-90deg);    
+}
+
+
+/* Main Section Styles */
+
+.main-section {
+    width: 100%;
+    height: calc(100% - 8rem);
+}
+
+.main-content {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title-one {
+    position: relative;
+    right: 12rem;
+    align-self: flex-end;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+.main-title-two {
+    align-self: flex-start;
+    font-size: 6rem;
+    font-weight: 700;
+}
+.main-category {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    left: 4rem;
+}
+
+.main-category-number {
+    margin-right: 4rem;
+    font-weight: 700;
+}
+
+.main-category-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.main-category-name {
+    margin-right: 8rem;
+    font-weight: 700;
+}
+
+.main-category-line {
+    width: 10rem;
+    height: 2px;
+    background-color: #000;
+}
+
+.main-description {
+    max-width: 50%;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+.main-seperator {
+    position: relative;
+    width: 1rem;
+    height: 2px;
+    right: 4rem;    
+    background-color: #000;
+}
+.main-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1494565108644-2af890493b92?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d03c0ba324a6c5279787ab9884b7371c&auto=format&fit=crop&w=1950&q=80) top center / cover no-repeat;
+    /* transform: scaleX(-1); */
+    z-index: -1;
+}
+/* Footer Style */
+
+footer {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    height: 100%;
+    width: 75%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content nav {
+    position: relative;
+    left: 10rem;
+}
+.footer-content nav a {
+    margin-right: 4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-more {
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.footer-more-content {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    bottom: 4rem;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-more-title {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.footer-more-icon svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    fill: #fff;
+    ;
+}
+
+
+/* Too Small Section Styles */
+
+.too-small {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Media Queries Styles */
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    
+    .too-small {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header,
+    aside,  
+    .main-section {
+        visibility: hidden;
+        transition-delay: 1s;
+        transition: .5s ease-in-out;
+    }
+}
